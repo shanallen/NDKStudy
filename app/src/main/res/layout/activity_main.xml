@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/iv_genius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/genus"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:id="@+id/sample_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:layout_below="@+id/iv_genius"
+                android:text="Hello World!"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/tv_testnumber"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试转换int"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/sample_text"/>
+
+            <TextView
+                android:id="@+id/tv_teststr"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试转换str"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_testnumber"/>
+
+            <TextView
+                android:id="@+id/tv_testarray_item"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试获得数组元素"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_teststr"/>
+
+            <TextView
+                android:id="@+id/tv_testaccess_field"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试jni改变Java对象元素"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_testarray_item"/>
+
+            <TextView
+                android:id="@+id/tv_c_open_java"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试C++调用Java逻辑"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_testaccess_field"/>
+
+            <TextView
+                android:id="@+id/tv_native_huidiao_thread"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试native回调接口给Java"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_c_open_java"/>
+
+            <TextView
+                android:id="@+id/tv_native_constructor"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试native的Constructor"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_native_huidiao_thread"/>
+
+
+            <TextView
+                android:id="@+id/tv_native_reference"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试native的Reference"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_native_constructor"/>
+
+            <TextView
+                android:id="@+id/tv_native_java_exception"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试Exception"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_native_reference"/>
+
+            <TextView
+                android:id="@+id/tv_no_params_thread"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试无参数启动线程"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_native_java_exception"/>
+
+            <TextView
+                android:id="@+id/tv_has_params_thread"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试有参数启动线程"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_no_params_thread"/>
+
+            <TextView
+                android:id="@+id/tv_join_thread"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试线程join操作"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_has_params_thread"/>
+            <TextView
+                android:id="@+id/tv_thread_wait"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试线程wait"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_join_thread"/>
+
+            <TextView
+                android:id="@+id/tv_thread_notify"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试线程notify"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_thread_wait"/>
+
+            <TextView
+                android:id="@+id/tv_thread_product_consumer"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="测试线程product_consumer"
+                tools:ignore="MissingConstraints"
+                android:layout_below="@+id/tv_thread_notify"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
